@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone', 16);
             $table->string('address');
             $table->string('photo');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
