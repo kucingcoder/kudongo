@@ -20,6 +20,8 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Filament\Pages\ChangePassword;
+use Filament\Navigation\MenuItem;
 
 class ManagePanelProvider extends PanelProvider
 {
@@ -32,6 +34,12 @@ class ManagePanelProvider extends PanelProvider
             ->login()
             ->colors([
                 'primary' => Color::Amber,
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Change Password')
+                    ->icon('heroicon-o-key')
+                    ->url(fn(): string => ChangePassword::getUrl()),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
