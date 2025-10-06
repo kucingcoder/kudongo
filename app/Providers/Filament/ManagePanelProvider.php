@@ -33,7 +33,7 @@ class ManagePanelProvider extends PanelProvider
             ->path('manage')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Green,
             ])
             ->userMenuItems([
                 MenuItem::make()
@@ -66,6 +66,7 @@ class ManagePanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->favicon(asset('logo.png'));
     }
 }
