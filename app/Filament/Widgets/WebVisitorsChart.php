@@ -6,17 +6,19 @@ use App\Models\WebVisitor;
 use Filament\Widgets\ChartWidget;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
+use Illuminate\Support\Carbon;
 
 class WebVisitorsChart extends ChartWidget
 {
     protected static ?string $heading = 'Web Visitors';
     protected static ?int $sort = 2;
+    protected int | string | array $columnSpan = 'full';
 
     protected function getData(): array
     {
         $data = Trend::model(WebVisitor::class)
             ->between(
-                start: now()->subDays(14),
+                start: now()->subDays(30),
                 end: now(),
             )
             ->perDay()
@@ -30,7 +32,7 @@ class WebVisitorsChart extends ChartWidget
                     'borderColor' => '#9BD0F5',
                 ],
             ],
-            'labels' => $data->map(fn(TrendValue $value) => $value->date),
+            'labels' => $data->map(fn(TrendValue $value) => Carbon::parse($value->date)->format('j M')),
         ];
     }
 

@@ -20,7 +20,7 @@ class EducationResource extends Resource
 
     protected static ?string $navigationLabel = 'Educations';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 9;
 
     public static function form(Form $form): Form
     {

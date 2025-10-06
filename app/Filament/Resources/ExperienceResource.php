@@ -20,7 +20,7 @@ class ExperienceResource extends Resource
 
     protected static ?string $navigationLabel = 'Experiences';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form
     {
