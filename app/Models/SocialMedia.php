@@ -13,6 +13,7 @@ class SocialMedia extends Model
     protected $table = 'social_medias';
 
     protected $fillable = [
+        'name',
         'logo',
         'url',
     ];

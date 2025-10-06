@@ -22,6 +22,10 @@ class SocialMediaResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(16),
+
                 FileUpload::make('logo')
                     ->required()
                     ->image()
@@ -42,6 +46,10 @@ class SocialMediaResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
+                    ->sortable(),
+
                 ImageColumn::make('logo')
                     ->label('Logo'),
 
