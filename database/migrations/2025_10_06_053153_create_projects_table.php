@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('full_description');
             $table->string('url')->nullable();
             $table->foreignId('client_id')->nullable()->constrained('clients')->onDelete('cascade');
-            $table->enum('category', ['paid', 'unpaid', 'opensource', 'collaboration', 'donation']);
+            $table->enum('category', ['school task', 'course project', 'competition', 'college project', 'internship', 'research', 'collaboration', 'volunteer', 'opensource', 'freelance', 'job duties', 'other']);
             $table->timestamps();
         });
     }

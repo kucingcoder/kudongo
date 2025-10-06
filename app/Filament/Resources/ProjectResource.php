@@ -64,11 +64,18 @@ class ProjectResource extends Resource
                                 Forms\Components\Select::make('category')
                                     ->required()
                                     ->options([
-                                        'paid' => 'Paid',
-                                        'unpaid' => 'Unpaid',
-                                        'opensource' => 'Open Source',
+                                        'school task' => 'School Task',
+                                        'course project' => 'Course Project',
+                                        'competition' => 'Competition',
+                                        'college project' => 'College Project',
+                                        'internship' => 'Internship',
+                                        'research' => 'Research',
                                         'collaboration' => 'Collaboration',
-                                        'donation' => 'Donation',
+                                        'volunteer' => 'Volunteer',
+                                        'opensource' => 'Open Source',
+                                        'freelance' => 'Freelance',
+                                        'job duties' => 'Job Duties',
+                                        'other' => 'Other',
                                     ])
                                     ->native(false),
 
