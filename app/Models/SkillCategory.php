@@ -10,6 +10,8 @@ class SkillCategory extends Model
 {
     use HasFactory;
 
+    protected $table = 'skill_categories';
+
     protected $fillable = [
         'name',
     ];

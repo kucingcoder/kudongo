@@ -10,6 +10,8 @@ class ProjectGallery extends Model
 {
     use HasFactory;
 
+    protected $table = 'project_galleries';
+
     protected $fillable = [
         'image',
         'id_project',

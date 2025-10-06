@@ -9,6 +9,8 @@ class WebVisitor extends Model
 {
     use HasFactory;
 
+    protected $table = 'web_visitors';
+
     protected $fillable = [
         'ip',
         'date',

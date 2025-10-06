@@ -10,6 +10,8 @@ class SocialMediaClick extends Model
 {
     use HasFactory;
 
+    protected $table = 'social_media_clicks';
+
     protected $fillable = [
         'ip',
         'date',
