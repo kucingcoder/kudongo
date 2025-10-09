@@ -36,7 +36,8 @@
 <body class="index-page">
     <header id="header" class="header d-flex align-items-center fixed-top mt-3">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="/logo.webp" alt="logo" class="img-fluid">
                 <h1 class="sitename text-uppercase text-primary fw-bold">@yield('name')</h1>
             </a>
 
@@ -62,7 +63,7 @@
         <div class="container footer-top px-5 px-md-0 py-5">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
+                    <a href="{{ route('home') }}" class="logo d-flex align-items-center">
                         <span class="sitename text-uppercase fw-bold text-primary">@yield('name')</span>
                     </a>
                     <div class="footer-contact pt-3">
