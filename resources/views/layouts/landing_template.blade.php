@@ -54,7 +54,7 @@
         </div>
     </header>
 
-    <main class="main min-vh-100 d-flex align-items-center">
+    <main class="main">
         @yield('content')
     </main>
 
