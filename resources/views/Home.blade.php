@@ -1,5 +1,6 @@
 @extends('layouts.landing_template')
 
+@section('name', 'M. Ibrahim Hanif')
 @section('title', 'Home')
 
 @section('content')

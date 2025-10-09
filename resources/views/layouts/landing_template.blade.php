@@ -3,10 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Home - @yield('title')</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@yield('name') - @yield('title')</title>
+    <meta name="description" content="@yield('description')">
+    <link rel="canonical" href="{{ url()->current() }}" />
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('name')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="/logo.webp">
+
+    <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icon/favicon.svg" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="@yield('name')" />
+    <link rel="manifest" href="/icon/site.webmanifest" />
+
     @include('layouts.landing_css')
 </head>
 
@@ -14,7 +30,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <h1 class="sitename">iLanding</h1>
+                <h1 class="sitename">@yield('name')</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -49,7 +65,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main min-vh-100 d-flex align-items-center">
         @yield('content')
     </main>
 
@@ -58,7 +74,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">iLanding</span>
+                        <span class="sitename">@yield('name')</span>
                     </a>
                     <div class="footer-contact pt-3">
                         <p>A108 Adam Street</p>
@@ -122,10 +138,7 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">iLanding</strong> <span>All Rights Reserved</span></p>
-            <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-            </div>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">@yield('name')</strong> | <span>All Rights Reserved</span></p>
         </div>
 
     </footer>
