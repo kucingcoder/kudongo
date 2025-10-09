@@ -10,7 +10,6 @@ class LandingController extends Controller
     public function home()
     {
         $user = Auth::user();
-
-        return view('Home');
+        return view('Home', compact('user'));
     }
 }
