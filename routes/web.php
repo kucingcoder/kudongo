@@ -17,4 +17,5 @@ Route::get('/experiences', [LandingController::class, 'experiences'])->name('exp
 Route::get('/educations', [LandingController::class, 'educations'])->name('educations');
 
 // utility
+Route::get('/download-cv', [LandingController::class, 'download_cv'])->name('download_cv');
 Route::post('/send-message', [LandingController::class, 'send_message'])->name('send_message');
