@@ -32,7 +32,7 @@
             </div>
 
             <div class="w-100 w-md-50 w-lg-50 d-flex align-items-center justify-content-center justify-content-md-end mb-5 mb-md-0 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-                <img src="/storage/{{ $user->photo }}" class="img-fluid w-75 rounded" alt="hero image">
+                <img src="/storage/{{ $user->photo }}" class="img-fluid w-75 rounded-circle shadow-lg border border-primary border-3" alt="hero image">
             </div>
         </div>
 
