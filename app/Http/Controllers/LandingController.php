@@ -52,8 +52,9 @@ class LandingController extends Controller
 
     public function educations()
     {
+        $user = Auth::user();
         $educations = Education::all();
-        return view('Educations', compact('educations'));
+        return view('Educations', compact('user', 'educations'));
     }
 
     public function experiences()
