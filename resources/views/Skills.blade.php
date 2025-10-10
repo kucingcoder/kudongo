@@ -75,7 +75,7 @@
 
 <div class="page-title light-background">
     <div class="container">
-        <h1>All My Skills</h1>
+        <h1>Skills That Have Been Learned</h1>
         <nav class="breadcrumbs">
             <ol>
                 <li><a href="{{ route('home') }}">Home</a></li>
