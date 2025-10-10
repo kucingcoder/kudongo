@@ -28,7 +28,6 @@
     <style>
         .footer-links a.text-white:hover {
             color: #cccccc !important;
-            /* Warna abu-abu terang saat di-hover */
         }
     </style>
 </head>
@@ -43,12 +42,12 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                    <li><a href="{{ route('projects') }}">Projects</a></li>
-                    <li><a href="{{ route('skills') }}">Skills</a></li>
-                    <li><a href="{{ route('certificates') }}">Certificates</a></li>
-                    <li><a href="{{ route('experiences') }}">Experiences</a></li>
-                    <li><a href="{{ route('educations') }}">Educations</a></li>
+                    <li><a href="{{ route('home') }}" class="{{ Route::is('home') ? 'active' : '' }}">Home</a></li>
+                    <li><a href="{{ route('projects') }}" class="{{ Route::is('projects') ? 'active' : '' }}">Projects</a></li>
+                    <li><a href="{{ route('skills') }}" class="{{ Route::is('skills') ? 'active' : '' }}">Skills</a></li>
+                    <li><a href="{{ route('certificates') }}" class="{{ Route::is('certificates') ? 'active' : '' }}">Certificates</a></li>
+                    <li><a href="{{ route('experiences') }}" class="{{ Route::is('experiences') ? 'active' : '' }}">Experiences</a></li>
+                    <li><a href="{{ route('educations') }}" class="{{ Route::is('educations') ? 'active' : '' }}">Educations</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
