@@ -50,16 +50,17 @@ class LandingController extends Controller
         return view('Certificates', compact('certificates'));
     }
 
+    public function experiences()
+    {
+        $user = Auth::user();
+        $experiences = Experience::all();
+        return view('Experiences', compact('user', 'experiences'));
+    }
+
     public function educations()
     {
         $user = Auth::user();
         $educations = Education::all();
         return view('Educations', compact('user', 'educations'));
-    }
-
-    public function experiences()
-    {
-        $experiences = Experience::all();
-        return view('Experiences', compact('experiences'));
     }
 }
