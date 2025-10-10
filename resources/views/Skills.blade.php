@@ -31,7 +31,6 @@
 
     .skill-card-img {
         flex: 0 0 100px;
-        padding: 15px;
         background: #f8f9fa;
         display: flex;
         align-items: center;
