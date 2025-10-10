@@ -159,9 +159,11 @@
                 }
             </script>
             <div class="swiper-wrapper align-items-center justify-content-center">
-                @foreach ($Clients as $client)
+                @forelse ($Clients as $client)
                 <a href="{{ $client->url }}" target="_blank" class="swiper-slide"><img src="/storage/{{ $client->logo }}" class="img-fluid" alt="logo-{{ $client->name }}"></a>
-                @endforeach
+                @empty
+                <p>No clients found.</p>
+                @endforelse
             </div>
             <div class="swiper-pagination"></div>
         </div>
